@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
 import { ToastContainer } from 'react-toastify';
-import LoginPage from './pages/LoginPage/LoginPage';
-import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
-import Payment from './pages/Payment/Payment';
-import StartContestPage from './pages/StartContestPage/StartContestPage';
-import Dashboard from './pages/Dashboard/Dashboard';
-import PrivateHoc from './components/PrivateHoc/PrivateHoc';
-import NotFound from './components/NotFound/NotFound';
-import Home from './pages/Home/Home';
-import OnlyNotAuthorizedUserHoc from './components/OnlyNotAuthorizedUserHoc/OnlyNotAuthorizedUserHoc';
-import ContestPage from './pages/ContestPage/ContestPage';
-import UserProfile from './pages/UserProfile/UserProfile';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
-import ContestCreationPage from './pages/ContestCreation/ContestCreationPage';
 import CONSTANTS from './constants';
 import browserHistory from './browserHistory';
+
+import LoginPage from './pages/LoginPage/LoginPage';
+import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
+import StartContestPage from './pages/StartContestPage/StartContestPage';
+import Payment from './pages/Payment/Payment';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Home from './pages/Home/Home';
+import ContestPage from './pages/ContestPage/ContestPage';
+import UserProfile from './pages/UserProfile/UserProfile';
+import ContestCreationPage from './pages/ContestCreation/ContestCreationPage';
+
+import PrivateHoc from './components/PrivateHoc/PrivateHoc';
+import NotFound from './components/NotFound/NotFound';
+import OnlyNotAuthorizedUserHoc from './components/OnlyNotAuthorizedUserHoc/OnlyNotAuthorizedUserHoc';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
+
 
 class App extends Component {
   render () {

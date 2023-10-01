@@ -1,7 +1,7 @@
 const env = process.env.NODE_ENV || 'development';
 const serverIP = 'localhost';
 const serverPort = 5000;
-export default {
+const INTERFACE_VARIABLES = {
   CUSTOMER: 'customer',
   CREATOR: 'creator',
   CONTEST_STATUS_ACTIVE: 'active',
@@ -82,3 +82,5 @@ export default {
     },
   ],
 };
+
+export default INTERFACE_VARIABLES
