@@ -9,6 +9,14 @@ import styles from './Home.module.sass';
 import carouselConstants from '../../carouselConstants';
 import Spinner from '../../components/Spinner/Spinner';
 import WhySquadhelp from '../../components/homeComponets/WhySquadhelp';
+import BlocksGroup from '../../components/BlocksGroup';
+import data from "./data.json"
+const {
+  contentBlocks: {
+    title: connectBlockTitle,
+    description: connectBlockDescription,
+  },
+} = data;
 
 const Home = (props) => {
   const [index, setIndex] = useState(0);
@@ -54,6 +62,7 @@ const Home = (props) => {
                   DASHBOARD
                 </Link>
               </div>
+              <BlocksGroup content={connectBlockTitle} idSelectedItem="2"/>
             </div>
             <div className={styles.greyContainer}>
               <SlideBar
@@ -61,6 +70,7 @@ const Home = (props) => {
                 carouselType={carouselConstants.MAIN_SLIDER}
               />
             </div>
+            <BlocksGroup content={connectBlockDescription} />
             <WhySquadhelp />
             <div className={styles.greyContainer}>
               <div className={styles.adv}>

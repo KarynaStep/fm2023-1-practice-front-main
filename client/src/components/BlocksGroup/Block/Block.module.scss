@@ -1,0 +1,9 @@
+.block{
+  padding: 1rem;
+  margin: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  &__selected{
+    border: 1px solid blue;
+  }
+}

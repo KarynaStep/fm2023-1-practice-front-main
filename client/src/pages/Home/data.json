@@ -1,0 +1,33 @@
+{
+  "contentBlocks": {
+    "title": [
+      {
+        "id": 1,
+        "title": "Yes",
+        "content": "But minor variations are allowed"
+      },
+      {
+        "id": 2,
+        "title": "Yes",
+        "content": "The Domain should exactly match the name"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "title": "Yes",
+        "content": "But minor variations are allowed"
+      },
+      {
+        "id": 12,
+        "title": "Yes",
+        "content": "The Domain should exactly match the name"
+      },
+      {
+        "id": 13,
+        "title": "Not",
+        "content": "I am only looking for a name, not a Domain"
+      }
+    ]
+  }
+}
