@@ -14,8 +14,8 @@ const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
   useEffect(() => {
     if (!data) {
       getUser();
-    }
-  }, []);
+    }// eslint-disable-next-line
+  }, []); 
 
   const logOut = () => {
     localStorage.clear();
