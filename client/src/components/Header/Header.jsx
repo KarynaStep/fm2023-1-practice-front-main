@@ -14,8 +14,8 @@ const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
   useEffect(() => {
     if (!data) {
       getUser();
-    }// eslint-disable-next-line
-  }, []); 
+    } // eslint-disable-next-line
+  }, []);
 
   const logOut = () => {
     localStorage.clear();
@@ -48,12 +48,19 @@ const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
             <ul>
               <li>
                 <Link to="/dashboard" style={{ textDecoration: 'none' }}>
-                  <span>View Dashboard</span>
+                  <span>view dashboard</span>
                 </Link>
               </li>
               <li>
                 <Link to="/account" style={{ textDecoration: 'none' }}>
-                  <span>My Account</span>
+                  <span>my account</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="http:/www.google.com"
+                  style={{ textDecoration: 'none' }}
+                > <span>messages</span>
                 </Link>
               </li>
               <li>
@@ -61,19 +68,11 @@ const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
                   to="http:/www.google.com"
                   style={{ textDecoration: 'none' }}
                 >
-                  <span>Messages</span>
+                  <span>affiliate dashboard</span>
                 </Link>
               </li>
               <li>
-                <Link
-                  to="http:/www.google.com"
-                  style={{ textDecoration: 'none' }}
-                >
-                  <span>Affiliate Dashboard</span>
-                </Link>
-              </li>
-              <li>
-                <span onClick={logOut}>Logout</span>
+                <span onClick={logOut}>logout</span>
               </li>
             </ul>
           </div>
@@ -88,10 +87,10 @@ const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
     return (
       <>
         <Link to="/login" style={{ textDecoration: 'none' }}>
-          <span className={styles.btn}>LOGIN</span>
+          <span className={styles.btn}>login</span>
         </Link>
         <Link to="/registration" style={{ textDecoration: 'none' }}>
-          <span className={styles.btn}>SIGN UP</span>
+          <span className={styles.btn}>sign up</span>
         </Link>
       </>
     );
@@ -107,7 +106,7 @@ const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
           Squadhelp recognized as one of the Most Innovative Companies by Inc
           Magazine.
         </span>
-        <a href="http://www.google.com">Read Announcement</a>
+        <Link to="/">read announcement</Link>
       </div>
       <div className={styles.loginSignnUpHeaders}>
         <div className={styles.numberContainer}>
@@ -137,129 +136,127 @@ const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
                 />
                 <ul>
                   <li>
-                    <a href="http://www.google.com">beauty</a>
+                    <Link to="/">beauty</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">consulting</a>
+                    <Link to="/">consulting</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">e-commerce</a>
+                    <Link to="/">e-commerce</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">fashion & clothing</a>
+                    <Link to="/">fashion & clothing</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">finance</a>
+                    <Link to="/">finance</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">real estate</a>
+                    <Link to="/">real estate</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">tech</a>
+                    <Link to="/">tech</Link>
                   </li>
                   <li className={styles.last}>
-                    <a href="http://www.google.com">more categories</a>
+                    <Link to="/">more categories</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <span>CONTESTS</span>
+                <span>contests</span>
                 <img
                   src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
                   alt="menu"
                 />
                 <ul>
                   <li>
-                    <a href="http://www.google.com">HOW IT WORKS</a>
+                    <Link to="/">how it works</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">PRICING</a>
+                    <Link to="/">pricing</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">AGENCY SERVICE</a>
+                    <Link to="/">agency service</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">ACTIVE CONTESTS</a>
+                    <Link to="/">active contests</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">WINNERS</a>
+                    <Link to="/">winners</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">LEADERBOARD</a>
+                    <Link to="/">leaderboard</Link>
                   </li>
                   <li className={styles.last}>
-                    <a href="http://www.google.com">BECOME A CREATIVE</a>
+                    <Link to="/">become a creative</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <span>Our Work</span>
+                <span>our work</span>
                 <img
                   src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
                   alt="menu"
                 />
                 <ul>
                   <li>
-                    <a href="http://www.google.com">NAMES</a>
+                    <Link to="/">names</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">TAGLINES</a>
+                    <Link to="/">taglines</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">LOGOS</a>
+                    <Link to="/">logos</Link>
                   </li>
                   <li className={styles.last}>
-                    <a href="http://www.google.com">TESTIMONIALS</a>
+                    <Link to="/">testimonials</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <span>Names For Sale</span>
+                <span>names for sale</span>
                 <img
                   src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
                   alt="menu"
                 />
                 <ul>
                   <li>
-                    <a href="http://www.google.com">POPULAR NAMES</a>
+                    <Link to="/">popular names</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">SHORT NAMES</a>
+                    <Link to="/">short names</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">INTRIGUING NAMES</a>
+                    <Link to="/">intriguing names</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">NAMES BY CATEGORY</a>
+                    <Link to="/">names by category</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">VISUAL NAME SEARCH</a>
+                    <Link to="/">visual name search</Link>
                   </li>
                   <li className={styles.last}>
-                    <a href="http://www.google.com">SELL YOUR DOMAINS</a>
+                    <Link to="/">sell your domains</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <span>Blog</span>
+                <span>blog</span>
                 <img
                   src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
                   alt="menu"
                 />
                 <ul>
                   <li>
-                    <a href="http://www.google.com">ULTIMATE NAMING GUIDE</a>
+                    <Link to="/">ultimate naming guide</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">
-                      POETIC DEVICES IN BUSINESS NAMING
-                    </a>
+                    <Link to="/">poetic devices in business naming</Link>
                   </li>
                   <li>
-                    <a href="http://www.google.com">CROWDED BAR THEORY</a>
+                    <Link to="/">crowded bar theory</Link>
                   </li>
                   <li className={styles.last}>
-                    <a href="http://www.google.com">ALL ARTICLES</a>
+                    <Link to="/">all articles</Link>
                   </li>
                 </ul>
               </li>
@@ -267,7 +264,7 @@ const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
           </div>
           {data && data.role !== CONSTANTS.CREATOR && (
             <div className={styles.startContestBtn} onClick={startContests}>
-              START CONTEST
+              start contest
             </div>
           )}
         </div>
@@ -276,9 +273,8 @@ const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
   );
 };
 
-
-const mapStateToProps = state => state.userStore;
-const mapDispatchToProps = dispatch => ({
+const mapStateToProps = (state) => state.userStore;
+const mapDispatchToProps = (dispatch) => ({
   getUser: () => dispatch(getUser()),
   clearUserStore: () => dispatch(clearUserStore()),
 });
