@@ -1,43 +1,32 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { useEffect } from 'react';
+import {useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { getUser } from '../../../store/slices/userSlice';
 import Spinner from '../../Spinner/Spinner';
 
-const withAuth = (Component, props) => {
-  class Hoc extends React.Component {
-    componentDidMount () {
-      if (!this.props.data) {
-        this.props.getUser();
-      }
-    }
+const withAuth = (Component, text) => {
+  return (props) => {
+    const { history, match } = props;
+    const { isFetching, data, error } = useSelector((state) => state.userStore);
+    const dispatch = useDispatch();
+    useEffect(() => {
+      if (!data) {
+        dispatch(getUser());
+      } // eslint-disable-next-line
+    }, []);
 
-    render () {
-      if (this.props.error) return <Redirect to='/' />;
+    if (error) return <Redirect to="/" />;
 
-      return (
-        <>
-          {this.props.isFetching ? (
-            <Spinner mtop />
-          ) : (
-            <Component
-              history={this.props.history}
-              match={this.props.match}
-              {...props}
-            />
-          )}
-        </>
-      );
-    }
-  }
-
-  const mapStateToProps = state => state.userStore;
-
-  const mapDispatchToProps = dispatch => ({
-    getUser: () => dispatch(getUser()),
-  });
-
-  return connect(mapStateToProps, mapDispatchToProps)(Hoc);
+    return (
+      <>
+        {isFetching ? (
+          <Spinner mtop />
+        ) : (
+          <Component history={history} match={match} {...text} />
+        )}
+      </>
+    );
+  };
 };
 
 export default withAuth;
