@@ -2,17 +2,17 @@ import React from 'react';
 import { Form, Formik } from 'formik';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import CONSTANTS from '../../constants';
-import { getDataForContest } from '../../store/slices/dataForContestSlice';
+import CONSTANTS from '../../../constants';
+import { getDataForContest } from '../../../store/slices/dataForContestSlice';
 import styles from './ContestForm.module.sass';
-import Spinner from '../Spinner/Spinner';
-import FormInput from '../forms/FormInput/FormInput';
-import SelectInput from '../forms/SelectInput/SelectInput';
-import FieldFileInput from '../forms/InputComponents/FieldFileInput/FieldFileInput';
-import FormTextArea from '../forms/InputComponents/FormTextArea/FormTextArea';
-import TryAgain from '../TryAgain/TryAgain';
-import Schems from '../../utils/validators/validationSchems';
-import OptionalSelects from '../OptionalSelects/OptionalSelects';
+import Spinner from '../../Spinner/Spinner';
+import FormInput from '../FormInput/FormInput';
+import SelectInput from '../SelectInput/SelectInput';
+import FieldFileInput from '../InputComponents/FieldFileInput/FieldFileInput';
+import FormTextArea from '../InputComponents/FormTextArea/FormTextArea';
+import TryAgain from '../../TryAgain/TryAgain';
+import Schems from '../../../utils/validators/validationSchems';
+import OptionalSelects from '../../OptionalSelects/OptionalSelects';
 
 const variableOptions = {
   [CONSTANTS.NAME_CONTEST]: {

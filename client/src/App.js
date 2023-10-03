@@ -21,6 +21,7 @@ import { withAuth, withNotAuth } from './components/HOCs';
 
 import NotFound from './components/NotFound/NotFound';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
+import PricingPage from './pages/PricingPage';
 
 
 class App extends Component {
@@ -40,6 +41,7 @@ class App extends Component {
         />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/pricing" component={PricingPage} />
           <Route exact path="/login" component={withNotAuth(LoginPage)} />
           <Route
             exact

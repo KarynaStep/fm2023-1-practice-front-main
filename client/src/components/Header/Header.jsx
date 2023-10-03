@@ -9,6 +9,7 @@ import CONSTANTS from '../../constants';
 import Logo from '../Logo';
 
 import styles from './Header.module.sass';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
   useEffect(() => {
@@ -172,7 +173,7 @@ const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
                     <Link to="/">how it works</Link>
                   </li>
                   <li>
-                    <Link to="/">pricing</Link>
+                    <NavLink to="/pricing">pricing</NavLink>
                   </li>
                   <li>
                     <Link to="/">agency service</Link>

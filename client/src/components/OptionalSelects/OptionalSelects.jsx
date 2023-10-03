@@ -2,7 +2,7 @@ import React from 'react';
 import CONSTANTS from '../../constants';
 import SelectInput from '../forms/SelectInput/SelectInput';
 import FormInput from '../forms/FormInput/FormInput';
-import styles from '../ContestForm/ContestForm.module.sass';
+import styles from '../forms/ContestForm/ContestForm.module.sass';
 import Spinner from '../Spinner/Spinner';
 
 const OptionalSelects = (props) => {
