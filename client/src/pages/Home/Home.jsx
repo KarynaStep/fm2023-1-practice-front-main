@@ -160,4 +160,5 @@ const mapStateToProps = (state) => {
   return { isFetching };
 };
 
+
 export default connect(mapStateToProps, null)(Home);
