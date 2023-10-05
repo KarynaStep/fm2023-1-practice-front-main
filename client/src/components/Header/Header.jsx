@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { connect, useDispatch, useSelector } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import { clearUserStore } from '../../store/slices/userSlice';
 import { getUser } from '../../store/slices/userSlice';
@@ -51,31 +51,31 @@ const Header = (props) => {
             />
             <ul>
               <li>
-                <Link to="/dashboard" style={{ textDecoration: 'none' }}>
+                <NavLink to="/dashboard" style={{ textDecoration: 'none' }}>
                   <span>view dashboard</span>
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/account" style={{ textDecoration: 'none' }}>
+                <NavLink to="/account" style={{ textDecoration: 'none' }}>
                   <span>my account</span>
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
-                  to="http:/www.google.com"
+                <NavLink
+                  to="/"
                   style={{ textDecoration: 'none' }}
                 >
                   {' '}
                   <span>messages</span>
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
-                  to="http:/www.google.com"
+                <NavLink
+                  to="/"
                   style={{ textDecoration: 'none' }}
                 >
                   <span>affiliate dashboard</span>
-                </Link>
+                </NavLink>
               </li>
               <li>
                 <span onClick={logOut}>logout</span>
@@ -92,12 +92,12 @@ const Header = (props) => {
     }
     return (
       <>
-        <Link to="/login" style={{ textDecoration: 'none' }}>
+        <NavLink to="/login" style={{ textDecoration: 'none' }}>
           <span className={styles.btn}>login</span>
-        </Link>
-        <Link to="/registration" style={{ textDecoration: 'none' }}>
+        </NavLink>
+        <NavLink to="/registration" style={{ textDecoration: 'none' }}>
           <span className={styles.btn}>sign up</span>
-        </Link>
+        </NavLink>
       </>
     );
   };
@@ -112,7 +112,7 @@ const Header = (props) => {
           Squadhelp recognized as one of the Most Innovative Companies by Inc
           Magazine.
         </span>
-        <Link to="/">read announcement</Link>
+        <NavLink to="/">read announcement</NavLink>
       </div>
       <div className={styles.loginSignnUpHeaders}>
         <div className={styles.numberContainer}>
@@ -142,28 +142,28 @@ const Header = (props) => {
                 />
                 <ul>
                   <li>
-                    <Link to="/">beauty</Link>
+                    <NavLink to="/">beauty</NavLink>
                   </li>
                   <li>
-                    <Link to="/">consulting</Link>
+                    <NavLink to="/">consulting</NavLink>
                   </li>
                   <li>
-                    <Link to="/">e-commerce</Link>
+                    <NavLink to="/">e-commerce</NavLink>
                   </li>
                   <li>
-                    <Link to="/">fashion & clothing</Link>
+                    <NavLink to="/">fashion & clothing</NavLink>
                   </li>
                   <li>
-                    <Link to="/">finance</Link>
+                    <NavLink to="/">finance</NavLink>
                   </li>
                   <li>
-                    <Link to="/">real estate</Link>
+                    <NavLink to="/">real estate</NavLink>
                   </li>
                   <li>
-                    <Link to="/">tech</Link>
+                    <NavLink to="/">tech</NavLink>
                   </li>
                   <li className={styles.last}>
-                    <Link to="/">more categories</Link>
+                    <NavLink to="/">more categories</NavLink>
                   </li>
                 </ul>
               </li>
@@ -175,25 +175,25 @@ const Header = (props) => {
                 />
                 <ul>
                   <li>
-                    <Link to="/">how it works</Link>
+                    <NavLink to="/">how it works</NavLink>
                   </li>
                   <li>
                     <NavLink to="/pricing">pricing</NavLink>
                   </li>
                   <li>
-                    <Link to="/">agency service</Link>
+                    <NavLink to="/">agency service</NavLink>
                   </li>
                   <li>
-                    <Link to="/">active contests</Link>
+                    <NavLink to="/">active contests</NavLink>
                   </li>
                   <li>
-                    <Link to="/">winners</Link>
+                    <NavLink to="/">winners</NavLink>
                   </li>
                   <li>
-                    <Link to="/">leaderboard</Link>
+                    <NavLink to="/">leaderboard</NavLink>
                   </li>
                   <li className={styles.last}>
-                    <Link to="/">become a creative</Link>
+                    <NavLink to="/">become a creative</NavLink>
                   </li>
                 </ul>
               </li>
@@ -205,16 +205,16 @@ const Header = (props) => {
                 />
                 <ul>
                   <li>
-                    <Link to="/">names</Link>
+                    <NavLink to="/">names</NavLink>
                   </li>
                   <li>
-                    <Link to="/">taglines</Link>
+                    <NavLink to="/">taglines</NavLink>
                   </li>
                   <li>
-                    <Link to="/">logos</Link>
+                    <NavLink to="/">logos</NavLink>
                   </li>
                   <li className={styles.last}>
-                    <Link to="/">testimonials</Link>
+                    <NavLink to="/">testimonials</NavLink>
                   </li>
                 </ul>
               </li>
@@ -226,22 +226,22 @@ const Header = (props) => {
                 />
                 <ul>
                   <li>
-                    <Link to="/">popular names</Link>
+                    <NavLink to="/">popular names</NavLink>
                   </li>
                   <li>
-                    <Link to="/">short names</Link>
+                    <NavLink to="/">short names</NavLink>
                   </li>
                   <li>
-                    <Link to="/">intriguing names</Link>
+                    <NavLink to="/">intriguing names</NavLink>
                   </li>
                   <li>
-                    <Link to="/">names by category</Link>
+                    <NavLink to="/">names by category</NavLink>
                   </li>
                   <li>
-                    <Link to="/">visual name search</Link>
+                    <NavLink to="/">visual name search</NavLink>
                   </li>
                   <li className={styles.last}>
-                    <Link to="/">sell your domains</Link>
+                    <NavLink to="/">sell your domains</NavLink>
                   </li>
                 </ul>
               </li>
@@ -253,16 +253,16 @@ const Header = (props) => {
                 />
                 <ul>
                   <li>
-                    <Link to="/">ultimate naming guide</Link>
+                    <NavLink to="/">ultimate naming guide</NavLink>
                   </li>
                   <li>
-                    <Link to="/">poetic devices in business naming</Link>
+                    <NavLink to="/">poetic devices in business naming</NavLink>
                   </li>
                   <li>
-                    <Link to="/">crowded bar theory</Link>
+                    <NavLink to="/">crowded bar theory</NavLink>
                   </li>
                   <li className={styles.last}>
-                    <Link to="/">all articles</Link>
+                    <NavLink to="/">all articles</NavLink>
                   </li>
                 </ul>
               </li>
