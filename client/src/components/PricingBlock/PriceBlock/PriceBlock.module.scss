@@ -1,0 +1,77 @@
+.block {
+  box-sizing: border-box;
+  border: 10px solid transparent;
+  width: 23%;
+  padding: 0.7rem;
+  
+  &_title {
+    border: 15px solid transparent;
+    &:hover{
+    box-shadow: 0 15px 15px #8f8f8f;;
+  }
+  }
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
+  .title {
+    margin: 10px 5px;
+    font-size: 33px;
+    font-weight: 700;
+  }
+  .decription {
+    padding: 10px;
+    color: #666;
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .price {
+    margin: 10px 5px;
+    text-align: right;
+    font-size: 28px;
+    font-weight: 600;
+    b {
+      text-transform: uppercase;
+    }
+  }
+  li {
+    position: relative;
+    padding: 0 2px 0 4px;
+  }
+  p {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 13px 0;
+  }
+  p + em {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    left: 100%;
+    top: -50%;
+    width: 80%;
+    background-color: rgb(226, 226, 226); 
+  }
+  .text{
+    border-top: 2px solid #ddd;
+  }
+  p:hover + em {
+    display: block;
+  }
+  .menu_items {
+    margin: 10px;
+    > p {
+      border: none;
+      display: inline;
+    }
+  }
+  button{
+    width: 100%;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 45px;
+    border: none;
+    border-radius: 10px;
+    color: #fff; 
+  }
+}

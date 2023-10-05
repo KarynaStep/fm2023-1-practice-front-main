@@ -2,7 +2,7 @@ const env = process.env.NODE_ENV || 'development';
 const serverIP = 'localhost';
 const serverPort = 5000;
 const CONSTANTS = {
-  CONTACT_PHONE: "(877)355-3585",
+  CONTACT_PHONE: '(877)355-3585',
   CUSTOMER: 'customer',
   CREATOR: 'creator',
   CONTEST_STATUS_ACTIVE: 'active',
@@ -82,6 +82,12 @@ const CONSTANTS = {
       items: ['Terms of Service', 'Privacy Policy', 'Cookie Policy'],
     },
   ],
+  COLORS_PRICE: {
+    Bronze: '#e0b48d',
+    Gold: '#e8b954',
+    Platinum: '#555',
+    Managed: '#28d2d0',
+  }
 };
 
 export default CONSTANTS;
