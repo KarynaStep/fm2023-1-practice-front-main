@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 
 import { clearUserStore } from '../../store/slices/userSlice';
@@ -11,16 +11,19 @@ import Logo from '../Logo';
 import styles from './Header.module.sass';
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
-const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
+const Header = (props) => {
+  const { history } = props;
+  const { isFetching, data } = useSelector((state) => state.userStore);
+  const dispatch = useDispatch();
   useEffect(() => {
     if (!data) {
-      getUser();
+      dispatch(getUser());
     } // eslint-disable-next-line
   }, []);
 
   const logOut = () => {
     localStorage.clear();
-    clearUserStore();
+    dispatch(clearUserStore());
     history.replace('/login');
   };
 
@@ -61,7 +64,9 @@ const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
                 <Link
                   to="http:/www.google.com"
                   style={{ textDecoration: 'none' }}
-                > <span>messages</span>
+                >
+                  {' '}
+                  <span>messages</span>
                 </Link>
               </li>
               <li>
@@ -274,10 +279,4 @@ const Header = ({ data, getUser, clearUserStore, history, isFetching }) => {
   );
 };
 
-const mapStateToProps = (state) => state.userStore;
-const mapDispatchToProps = (dispatch) => ({
-  getUser: () => dispatch(getUser()),
-  clearUserStore: () => dispatch(clearUserStore()),
-});
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
+export default withRouter(Header);
